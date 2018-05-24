@@ -1,10 +1,10 @@
 #include <iostream>
-
+#include "d3.h"
 using namespace std;
 
 int main()
 {
-    cout << "Hello World!" << endl;
+    d3 d;
     return 0;
 }
 
