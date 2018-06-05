@@ -1,10 +1,16 @@
 #include <iostream>
 #include "d3.h"
+#include "d11.h"
+#include "d15.h"
 using namespace std;
 
 int main()
 {
-    d3 d;
+    Bulk_quote *a = new Bulk_quote();
+    //print_total(*a, 2);
+
+//    Quote q;
+//    print_total(q, 8);
     return 0;
 }
 
