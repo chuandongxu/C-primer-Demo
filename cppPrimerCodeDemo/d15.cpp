@@ -1,5 +1,17 @@
 #include "d15.h"
 
+//using namespace d15_4;
+
+void d15_4::clobber(Sneaky &s)
+{
+    s.j = s.prot_mem = 0;
+}
+
+void d15_4::clobber(Base &b)
+{
+   //b.prot_mem = 0;
+}
+
 double print_total(const Quote &item, size_t n)
 {
     double ret = item.net_price(n);
