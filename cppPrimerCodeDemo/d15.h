@@ -26,9 +26,19 @@ public:
         Quote(book, price),
         quantity(qty), discount(disc) {}
     double net_price(std::size_t) const = 0;
+    std::pair<size_t, double> discount_policy() const
+    {  return {quantity, discount}; }
+    void testXcd(){;}
 protected:
     std::size_t quantity = 0;
     double discount = 0.0;
+};
+
+class test
+{
+public:
+    test() = default;
+    virtual void xcdffd();
 };
 
 class Bulk_quote : public Disc_quote
@@ -39,7 +49,6 @@ public:
     double net_price(std::size_t n) const override {std::cout << "Bulk_quote"; return n;}
     ~Bulk_quote(){}
 };
-
 
 
 class A
@@ -123,6 +132,52 @@ class Sneaky : public Base
 //{
 //   // b.prot_mem = 0;
 //}
+}
+
+//练习
+namespace practice
+{
+class Quote
+{
+public:
+    Quote()=default;
+};
+}
+
+//15.5
+namespace jie15_5 {
+class Base
+{
+protected:
+    int prot_mem;
+};
+
+class Sneaky : public Base
+{
+    friend void clobber(Sneaky &);
+    friend void clobber(Base &);
+    int j;
+};
+void clobber(Sneaky &s);
+//void clobber(Base &b) {b.prot_mem = 0;}
+}
+
+namespace jie15_6 {
+struct Base
+{
+    Base() : mem(0) {}
+protected:
+    int mem;
+};
+
+struct Derived : Base
+{
+    Derived(int i): mem(i) {}
+    int get_mem() { return mem; }
+
+protected:
+    int mem;
+};
 }
 
 #endif // D15_H

@@ -38,3 +38,13 @@ void Derived::f(const Derived &der)
 //{
 //    std::cout << "this is Base " << std::endl;
 //}
+
+double Disc_quote::net_price(std::size_t) const
+{
+
+}
+
+void jie15_5::clobber(jie15_5::Sneaky &s)
+{
+     s.j = s.prot_mem = 0;
+}

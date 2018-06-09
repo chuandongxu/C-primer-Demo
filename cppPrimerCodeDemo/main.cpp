@@ -16,7 +16,19 @@ int main()
 //    Derived d;
 //    d.f(d);
 
-    foo_fo();
+    //Disc_quote d;
+    //foo_fo();
+    //test d;
+    //test d;
+//    Bulk_quote bulk;
+//    Bulk_quote *bulkP = &bulk;
+//    Quote *itemP = &bulk;
+//    bulkP->discount_policy();
+    //itemP->
+
+    jie15_6::Derived d(42);
+    cout << d.get_mem() << endl;
+
     return 0;
 }
 
