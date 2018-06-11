@@ -11,7 +11,8 @@ SOURCES += main.cpp \
     d7.cpp \
     d11.cpp \
     d15.cpp \
-    test.cpp
+    test.cpp \
+    d18.cpp
 
 HEADERS += \
     quote.h \
@@ -20,4 +21,5 @@ HEADERS += \
     d7.h \
     d11.h \
     d15.h \
-    test.h
+    test.h \
+    d18.h
